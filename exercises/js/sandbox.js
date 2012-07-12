@@ -57,7 +57,7 @@ $(function(){
    $('div.module:last').append('<p>   new paragraph isnserted after the heading</p>')
    $("div.module select").append('<option value="wednesday">Wednesday</option>');
    $("body").append('<div class="module"></div>')
-   $('div.module:last').append($('img:last'))
+   $('img:last').clone().appendTo($('div.module:last'))
    
     
 });
