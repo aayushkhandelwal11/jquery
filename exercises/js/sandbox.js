@@ -20,16 +20,17 @@ $(function(){
        parentTag.attr("class","input_text")
      });
     
-    
+   
      $("#myList").
-      children('li').
+      children('li.current').
         each(function(idx,el){
-           if($(el).attr("class")=="current bar")
+           if($(el).attr("class")=="current")
            {
-              $(el).removeClass('current bar') ;
-              $(el).next().addClass('current bar')
+              $(el).removeClass('current') ;
+              $(el).next().addClass('current')
            }
      });
+  
      
      
      $("#specials").
@@ -44,5 +45,19 @@ $(function(){
    var firstelement=$("#slideshow :eq(0)") ;
    $(firstelement).addClass('current'); 
    $(firstelement).nextAll().addClass('disabled');    
-       
+   
+   for(i=1;i<6;i++)
+   {
+     $('#myList').append('<li> text no' + i + '</li>');
+   }   
+   
+   $('#myList :odd').remove();
+   
+   $('div.module:last').append('<h2>   new heading inserted</h2>')
+   $('div.module:last').append('<p>   new paragraph isnserted after the heading</p>')
+   $("div.module select").append('<option value="wednesday">Wednesday</option>');
+   $("body").append('<div class="module"></div>')
+   $('div.module:last').append($('img:last'))
+   
+    
 });
