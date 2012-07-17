@@ -1,17 +1,17 @@
 $(function(){
   var i=1;
-  $("button").live('click', function() {
+  $("body").delegate('button','click', function() {
  
     $(".maindivision").append("<div>"+ i +"</div>")
     i++;
 });
-  $(".maindivision div:last").live('click', function() {
+  $(".maindivision").delegate('div:last','click', function() {
  
    $(this).remove();
    i--;
 });
 
-    $(".maindivision div").live('click', function() {
+    $(".maindivision").delegate("div",'click', function() {
  
    $(this).siblings().removeClass("click");
    $(this).addClass("click");
