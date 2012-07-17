@@ -1,20 +1,15 @@
 $(function(){
 
-  $("#search :eq(1)").val($("#search :eq(0)").text())
-  $("#search :eq(1)").attr("class","hint")
-  $("#search :eq(0)").remove();
-		  
-	//$("#search :eq(0)").blur(function() {
-	//    alert("hello");
-	//});
-
-	$("#search :eq(0)").
-	focus(function() {
+  $("#search :input[type=text]").val($("#search label[for=q]").text())
+  $("#search :input[type=text]").attr("class","hint")
+  $("#search label[for=q]").remove();
+  console.log($("#search :input[type=text]"))
+  $("input.hint").live('focus',function() {
 	$(this).val("");
 	$(this).removeClass("hint") ;
 	});
 
-  $("#search :eq(0)").
+  $("#search :first").
   blur(function() {
     var x=$(this).val().trim(" ").length;
 
