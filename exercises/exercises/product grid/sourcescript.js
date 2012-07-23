@@ -22,11 +22,11 @@ $(document).ready(function () {
                         if (brand.indexOf(itemdata.brand) < 0) {
                              
                             brand.push(itemdata.brand)
-                           $("div #brand").append("<input type='checkbox' name='brands' value=" + itemdata.brand.replace(/\s/g,'') + " id='" + itemdata.brand.replace(/\s/g,'')+ "' /> <lablel for=" +itemdata.brand.replace(/\s/g,'') + ">" + itemdata.brand + "</label><br />")
+                           $("div #brand").append("<input type='checkbox' name='brands' value=" + itemdata.brand.replace(/\s/g,'') + " id='" + itemdata.brand.replace(/\s/g,'')+ "' /> <label for=" +itemdata.brand.replace(/\s/g,'') + ">" + itemdata.brand + "</label><br />")
                         }
                         if (color.indexOf(itemdata.color) < 0) {
                             color.push(itemdata.color)
-                            $("div #color").append("<input type='checkbox' name='brands' value=" + itemdata.color + " id='" + itemdata.color + "'/><lablel for=" + itemdata.color + ">" + itemdata.color + "</label><br />")
+                           $("div #color").append("<input type='checkbox' name='brands' value=" + itemdata.color + " id='" + itemdata.color + "'/><label for=" + itemdata.color + ">" + itemdata.color + "</label><br />")
                         }
 
                         $("div.right").append("<img src='images/" + itemdata.url + "' />")
