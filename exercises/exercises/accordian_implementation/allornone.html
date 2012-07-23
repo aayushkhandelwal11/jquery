@@ -1,77 +1,126 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
-</style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <title></title>
 </head>
+
 <body>
-<div class="main">
-<div class="container">
-<ul class="accordion" id="main">
-<li id="fruits">
-<a href="">fruits</a>
-<ul class="accordion" id="listoffruits">
-<li id="apple"><a href="allornone.html">Apple</a>
-<ul class="accordion" id="listofapples">
-<li id="redApple"><a href="allornone.html">Red Apple</a></li>
-<li id="greenApple"><a href="allornone.html">Green Apple</a></li>
-<li id="yellowApple"><a href="allornone.html">yellow Apple</a></li>
-</ul>
-</li>
-<li id="grapes"><a href="allornone.html">Grapes</a></li>
-<li id="banana"><a href="allornone.html">Bananan</a></li>
-<li id="papaya"><a href="allornone.html">papaya</a></li>
-</ul>
-</li>
-<li id="vegetables"><a href="allornone.html">vegetables</a>
-<ul id="listofvegetables"class="accordion">
-<li id="potato"><a href="allornone.html">potato</a></li>
-<li id="spinach"><a href="allornone.html">spinach</a></li>
-<li id="brinjal"><a href="allornone.html">brinjal</a></li>
-</ul>
-</li>
-<li id="breads"><a href="allornone.html">breads</a>
-<ul id="listofbreads"class="accordion">
-<li id="wheat"><a href="allornone.html">wheat</a>
-<ul id="listofwheatbread" class="accordion">
-<li id="oreganeo"><a href="allornone.html">oregano</a></li>
-<li id="simple"><a href="allornone.html">simple</a></li>
-<li id="sweet"><a href="allornone.html">sweet</a></li>
-<li id="salty"><a href="allornone.html">salty</a></li>
-</ul>
+ <div class="main">
+    <div class="container">
+      <ul class="accordion" id="main">
+        <li id="fruits">
+          <a href="">fruits</a>
 
-</li>
-<li id="oats"><a href="allornone.html">Oats</a></li>
-<li id="brown"><a href="allornone.html">Brown</a></li>
+          <ul class="accordion" id="listoffruits">
+            <li id="apple">
+              <a href="allornone.html">Apple</a>
 
-</ul>
-</li>
-</ul>
-</div>
-<div class="container2">Another paragraph!
+              <ul class="accordion" id="listofapples">
+                <li id="redApple"><a href="">Red Apple</a>
+                  <ul class="accordion" id="placesofapples">
+                     <li ><a href="">indian</a>
+                       <ul>
+                           <li><a href="allornone.html">fresh</a>
+                              <ul class="accordion" id="placesofapples">   
+                               <li><a href="">sweet</a>
+                               <ul class="accordion" id="placesofapples"> 
+                                <li><a href="allornone.html">low sweet</a></li>
+                                <li><a href="allornone.html">medium sweet</a></li>
+                                <li><a href="">high sweet</a>
+                                  <ul class="accordion" id="placesofapples"> 
+                                <li><a href="allornone.html">dangerous</a></li>
+                                <li><a href="allornone.html">not dangerous</a></li>
+                               
+                               </ul>  
+                                
+                                </li>
+                               </ul>
+                               </li>
+                                <li><a href="allornone.html">sour</a></li>
+                           
+                               </ul>
+                           </li>
+                      <li><a href="allornone.html">foul</a></li>
+                        </li>
+                        </ul>
+                     <li><a href="allornone.html">german</a></li>
+                     
+                     <li><a href="allornone.html">Australian</a></li>
+                  
+                   </ul>
+                   </li>
+                <li id="greenApple"><a href="allornone.html">Green Apple</a></li>
 
+                <li id="yellowApple"><a href="allornone.html">yellow Apple</a></li>
+              </ul>
+            </li>
 
-datat
-datat
-datat
-</div>
+            <li id="grapes"><a href="allornone.html">Grapes</a></li>
 
-</div>
-<script src="jquery-1.3.2.js" type="text/javascript" charset="utf-8"></script>	
-<script src="jquery.dcjqaccordion.2.9.js" type="text/javascript" charset="utf-8"></script>
-<script src="jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-		// <![CDATA[
-			
-		$(document).ready(function () {
-			$('ul:first').dcAccordion();
-		});
-				
-		// ]]>
-	</script>
- <script src="assigningids.js" type="text/javascript" charset="utf-8"></script>	
-<script src="attach.js" type="text/javascript" charset="utf-8"></script>
-<script src="load.js" type="text/javascript" charset="utf-8"></script>
-	
+            <li id="banana"><a href="allornone.html">Bananan</a></li>
+
+            <li id="papaya"><a href="allornone.html">papaya</a></li>
+          </ul>
+        </li>
+
+        <li id="vegetables">
+          <a href="allornone.html">vegetables</a>
+
+          <ul id="listofvegetables" class="accordion">
+            <li id="potato"><a href="allornone.html">potato</a></li>
+
+            <li id="spinach"><a href="allornone.html">spinach</a></li>
+
+            <li id="brinjal"><a href="allornone.html">brinjal</a></li>
+          </ul>
+        </li>
+
+        <li id="breads">
+          <a href="allornone.html">breads</a>
+
+          <ul id="listofbreads" class="accordion">
+            <li id="wheat">
+              <a href="allornone.html">wheat</a>
+
+              <ul id="listofwheatbread" class="accordion">
+                <li id="oreganeo"><a href="allornone.html">oregano</a></li>
+
+                <li id="simple"><a href="allornone.html">simple</a></li>
+
+                <li id="sweet"><a href="allornone.html">sweet</a></li>
+
+                <li id="salty"><a href="allornone.html">salty</a></li>
+              </ul>
+            </li>
+
+            <li id="oats"><a href="allornone.html">Oats</a></li>
+
+            <li id="brown"><a href="allornone.html">Brown</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="container2">
+      Another paragraph! datat datat datat
+    </div>
+  </div><script src="jquery-1.3.2.js" type="text/javascript" charset="utf-8">
+</script><script src="jquery.dcjqaccordion.2.9.js" type="text/javascript" charset=
+"utf-8">
+</script><script src="jquery.cookie.js" type="text/javascript" charset="utf-8">
+</script><script type="text/javascript">
+                        
+                $(document).ready(function () {
+                        $('ul:first').dcAccordion();
+                });
+                        
+  </script><script src="assigningids.js" type="text/javascript" charset="utf-8">
+</script><script src="attach.js" type="text/javascript" charset="utf-8">
+</script><script src="load.js" type="text/javascript" charset="utf-8">
+</script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 	body { font: 0.8em Arial, sans-serif; }
 	.pageContent { width: 400px; }
+	 ul {display:block}
 	.accordion { list-style-type: none; padding: 0; margin: 0 0 30px; border: 1px solid #17a; border-top: none; border-left: none; }
 	.accordion ul { padding: 0; margin: 0; float: left; display: block; width: 100%; }
 	.accordion li { background: #3cf; cursor: pointer; list-style-type: none; padding: 0; margin: 0; float: left; display: block; width: 100%;}
