@@ -5,16 +5,20 @@ $(function(){
    $('div.module h2').each(function(index,el) {
            
    $('ul#ullist').append("<li id=index"+index+">"+ $(el).text() +"</li>");
-         $("#index"+index).bind({
+      $("#index"+index).data("h2",$(this))
+        
+    });
+    
+     $("ul#ullist li").bind({
            click: function() {
-                  $("div.module").hide();
-               $(el).parent().show();
-               $(this).addClass("current");
-               $(this).siblings().removeClass("current");
+                 $("div.module").hide();
+                 $($(this).data("h2")).parent().show();  
+               
+                 $(this).addClass("current");
+                 $(this).siblings().removeClass("current");
             
              }
           });
-    });
   
    
 });

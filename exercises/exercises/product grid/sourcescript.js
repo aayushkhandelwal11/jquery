@@ -17,7 +17,7 @@ $(document).ready(function () {
                     var brand = []
                     var color = []
                     jQuery.each(json, function (index, itemdata) {
-                              
+                              $("input:radio[name=available]").click();
 
                         if (brand.indexOf(itemdata.brand) < 0) {
                              
