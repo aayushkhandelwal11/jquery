@@ -8,6 +8,7 @@ $(function(){
                 $("#"+parents[i].id).css("display","block");
                $("#"+parents[i].id).children("a").show();
                $("#"+parents[i].id).children("a").focus();
+               $("#"+parents[i].id).children("a").click();
                $.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase()); 
                if($.browser.chrome) {
                      $("#"+parents[i].id).children("a").click();

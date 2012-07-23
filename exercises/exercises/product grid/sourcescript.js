@@ -13,7 +13,7 @@ $(document).ready(function () {
                 // the response is passed to the function
                 success: function (json) {
                      result=json
-                    
+                    id=0;
                     var brand = []
                     var color = []
                     jQuery.each(json, function (index, itemdata) {
@@ -29,8 +29,13 @@ $(document).ready(function () {
                            $("div #color").append("<input type='checkbox' name='brands' value=" + itemdata.color + " id='" + itemdata.color + "'/><label for=" + itemdata.color + ">" + itemdata.color + "</label><br />")
                         }
 
-                        $("div.right").append("<img src='images/" + itemdata.url + "' />")
-                        $("div.right").append("<text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>")
+                        $("div.right").append("<img src='images/" + itemdata.url + "' id='"+id+"'>&nbsp;&nbsp;</img>")
+                      $("#"+id).addClass(itemdata.brand.replace(/\s/g,''))
+                        $("#"+id).addClass(itemdata.color)
+                        if(itemdata.sold_out==0)
+                        $("#"+id).addClass("avail")
+                        id=id+1;
+                      
 
                     });
                   
@@ -70,21 +75,18 @@ $(document).ready(function () {
             allColor.push("Blue");
         }
         var checked = $('input:radio[name=available]:checked').val();
-        if (checked != "all") quantity = 1;
+        if (checked == "all") quantity = 1;
         
-        $("div.right").children().remove();
+        $("div.right").children().hide();
         jQuery.each(data, function (index, itemData) {
          
             for (i = 0; i < allBrands.length; i++) {
                 for (j = 0; j < allColor.length; j++) {
-                    if (itemData.brand.replace(/\s/g,'') == allBrands[i].replace(/\s/g,'') && itemData.color == allColor[j] && itemData.sold_out < quantity) {
-                        console.log(itemData.url)
-                        $("div.right").append("<img src='images/" + itemData.url + "'/>")
-                        $("div.right").append("<text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>")
-                    }
-
-
-                }
+                      if(quantity==1) 
+                    $("."+allBrands[i].replace(/\s/g,'')+"."+ allColor[j]).show()
+                      else
+                      $("."+allBrands[i].replace(/\s/g,'')+"."+ allColor[j] +".avail").show()
+                  }
             }
 
 
