@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+    var brand = []
+    var color = []
 
     jQuery.extend({
         getValues: function () {
@@ -14,8 +15,7 @@ $(document).ready(function () {
                 success: function (json) {
                      result=json
                     id=0;
-                    var brand = []
-                    var color = []
+                   
                     jQuery.each(json, function (index, itemdata) {
                               $("input:radio[name=available]").click();
 
@@ -63,16 +63,10 @@ $(document).ready(function () {
             allColor.push($(this).val());
         });
         if (allBrands.length == 0) {
-            allBrands.push("BRAND A");
-            allBrands.push("BRAND B");
-            allBrands.push("BRAND D");
-            allBrands.push("BRAND C");
+            allBrands=brand
         }
         if (allColor.length == 0) {
-            allColor.push("Red");
-            allColor.push("Green");
-            allColor.push("Yellow");
-            allColor.push("Blue");
+           allColor=color
         }
         var checked = $('input:radio[name=available]:checked').val();
         if (checked == "all") quantity = 1;
