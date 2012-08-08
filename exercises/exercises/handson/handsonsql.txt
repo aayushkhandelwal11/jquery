@@ -1,0 +1,23 @@
+
+q 4 select u.name , count(t.id) from users u inner join tweets t on t.user_id=u.id group by u.id
+
+
+q 2 select u.name ,select concat_ws ( ',', select concat(r.name,",") from users r inner join relationships t on t.following_id=r.id
+inner join users u2 on u2.id=r.id where u.name=u2.name) from user u ;
+
+
+
+
+
+q3 select distinct rt.name ,t.content , t.created_at from users u 
+inner join relationships r on r.user_id=u.id 
+inner join users rt on rt.id= r.following_id 
+right outer join tweets t on rt.id=t.user_id
+where u.id="1" or t.user_id="1" order by t.created_at desc ;
+
+
+
+
+q6 select u.name,t.content from users u inner join tweets t on t.user_id=u.id where minute(datediff(t.created_at,now()))<61;
+
+q5 select distinct u.name from users u  left outer join tweets t on t.user_id=u.id where t.user_id != u.id ;
