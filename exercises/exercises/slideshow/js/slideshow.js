@@ -3,7 +3,7 @@ $(function(){
     $("body").before($('#slideshow'));
     var i=0;
     $("#slideshow  li:gt(0)").hide();
-    $("#slideshow").next().before('image total<input type="text" id="text1" disabled="disabled" >    image no<input type="text" id="text2" disabled="disabled" >')
+    $("#slideshow").after('image total<input type="text" id="text1" disabled="disabled" >    image no<input type="text" id="text2" disabled="disabled" >')
     $("#text1").val($("#slideshow li").length)
     setInterval(function() { 
     $("#slideshow").height(350)
